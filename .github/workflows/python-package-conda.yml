@@ -30,4 +30,8 @@ jobs:
         pytest
     - name: Run flake
       run: flake8
-
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v2
+      with:
+          name: pytest-html-report
+          path: report.html
