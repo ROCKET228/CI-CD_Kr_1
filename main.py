@@ -4,6 +4,7 @@ if __name__ == "__main__":
     printPopulation(country_populations)
 
 def fileRead(filename):
+
     country_populations = {}
 
     with open(filename, 'r') as file:
