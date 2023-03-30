@@ -1,12 +1,6 @@
-if __name__ == "__main__":
-    filename = "Countries.txt"
-    country_populations = fileRead(filename)
-    printPopulation(country_populations)
 
 def fileRead(filename):
-
     country_populations = {}
-
     with open(filename, 'r') as file:
         for line in file:
             country, year, population = line.strip().split(", ")
@@ -20,7 +14,6 @@ def fileRead(filename):
     return country_populations
 
 
-
 def printPopulation(country_populations):
     for country, populations in country_populations.items():
         print(country + ":")
@@ -29,3 +22,9 @@ def printPopulation(country_populations):
             year2, pop2 = populations[i + 1]
             pop_change = pop2 - pop1
             print(year1 + " -> " + year2 + ": " + str(pop_change))
+
+
+if __name__ == "__main__":
+    filename = "Countries.txt"
+    country_populations = fileRead(filename)
+    printPopulation(country_populations)
