@@ -5,7 +5,6 @@ if __name__ == "__main__":
 
 def fileRead(filename):
     country_populations = {}
-
     with open(filename, 'r') as file:
         for line in file:
             country, year, population = line.strip().split(", ")
