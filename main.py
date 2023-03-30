@@ -21,6 +21,7 @@ def fileRead(filename):
 
 
 def printPopulation(country_populations):
+
     for country, populations in country_populations.items():
         print(country + ":")
         for i in range(len(populations) - 1):
